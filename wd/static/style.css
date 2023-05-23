@@ -1,0 +1,86 @@
+/* body css */
+body{
+    background-color: rgba(99, 172, 255, 0.777);
+
+  
+}
+
+
+
+/* navbar css */
+.navbar{
+    background-color: rgba(255, 255, 255, 0.449);
+    backdrop-filter: blur(4px);
+    display: grid;
+    width: 150px;
+    position: fixed;
+    justify-content: center;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.logo-1{
+    max-width: 80px;
+    padding-top: 40px;
+}
+
+.nav-iteam{
+    gap: 80px;
+    display: grid;
+    padding-top: 80px;
+    padding-bottom: 40px;
+    padding-left: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 115, 0) !important;
+}
+
+p{
+    font-size: 12px;
+}
+
+
+
+/* header css */
+header{
+    margin-left: 200px;
+}
+
+.search{
+    margin-top: 20px;
+    border: 0px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.449);
+    backdrop-filter: blur(4px);
+    font-size: 15px;
+    padding: 10px 500px 10px 10px;
+}
+
+
+
+/* main css */
+main{
+    margin-left: 200px;
+    padding-top: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+main h1{
+    font-size: 3rem;
+}
+.city{
+    text-transform: uppercase;
+    color: rgb(255, 115, 0) !important;
+}
+.container-1{
+    display: flex;
+    padding-left: 40px;
+    gap: 40px;
+}
+.sun-1{
+    border-radius: 50%;
+    max-width: 200px;
+}

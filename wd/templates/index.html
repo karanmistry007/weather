@@ -1,0 +1,86 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Weather</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    
+    <!-- font awesome css -->
+    <link rel="stylesheet" href="https://kit.fontawesome.com/ab8f278cc1.css" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ab8f278cc1.js" crossorigin="anonymous"></script>
+
+    <!-- main style.css -->
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+</head>
+<body>
+    <div class="navbar">
+        <div>
+            <img class="logo-1" src="\media\logo.png" >
+        </div>
+
+        <div class="nav-iteam">
+            <a href="">
+                <i class="fa-solid fa-cloud-showers-water fa-2xl"></i><br> 
+                <p>Weather</p>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-bars fa-2xl"></i><br>
+                <p>Cities</p>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-map fa-2xl"></i><br>
+                <p>Map</p>
+            </a>
+            <a href="">
+                <i class="fa-solid fa-sliders fa-2xl"></i><br>
+                <p>Settings</p>
+            </a>
+        </div>
+    </div>
+    
+
+    <header>
+        <form method="post" class="col-md-6 col-md-offset-3">
+            {% csrf_token %}
+        <input type="text" name="city" class="search" placeholder="Search for Cities...">
+        </form>
+    </header>
+
+
+    <main>
+        <div class="container-1">
+            {% if country_code and coordinate and temp and pressure and humidity %} 
+            <div>
+                <h1 class="city">
+                    {{city}}
+                </h1>
+                <h1>
+                    {{temp}}
+                </h1>
+                <h1>
+                   Humidity: {{humidity}}
+                </h1>
+                <h1>
+                    Pressure: {{pressure}}
+                </h1>
+
+            </div>
+            <div>
+                <img class="sun-1" src="\media\sun-1.png">
+            </div>
+            {% endif %}  
+        </div>
+    </main>
+   
+
+    <footer>
+
+    </footer>
+
+</body>
+</html>
